@@ -5,17 +5,17 @@ FROM ruby:3.3.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
 # Set work directory
-WORKDIR /myapp
+WORKDIR /spacetrader
 
 # Copy the Gemfile and Gemfile.lock into the image
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+COPY Gemfile /spacetrader/Gemfile
+COPY Gemfile.lock /spacetrader/Gemfile.lock
 
 # Install gems
 RUN bundle install
 
 # Copy the main application.
-COPY . /myapp
+COPY . /spacetrader
 
 # Expose the port the app runs on
 EXPOSE 3000

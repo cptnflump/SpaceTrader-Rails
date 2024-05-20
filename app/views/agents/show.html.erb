@@ -1,2 +1,9 @@
-<h1>Agents#show</h1>
-<p>Find me in app/views/agents/show.html.erb</p>
+<h1><%= @agent.symbol %></h1>
+
+<p><strong>Credits: </strong><%= @agent.credits %></p>
+<p><strong>Faction: </strong><%= @agent.faction %></p>
+<p><strong>Headquarters: </strong><%= @agent.headquarters %></p>
+<p><strong>Account ID: </strong><%= @agent.account_id %></p>
+<p><strong>Created at: </strong><%= @agent.created_at %></p>
+<p><strong>Updated at: </strong><%= @agent.updated_at %></p>
+

@@ -1,12 +1,16 @@
 class AgentsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
+  def new
+    @agent = Agent.new
+  end
+
   def index
     @agents = Agent.all
   end
 
   def show
-    @agent = Agent.find(params[:id])
+    @agent = Agent.find_by!(symbol: params[:symbol].upcase)
   end
 
   def create

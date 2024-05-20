@@ -1,6 +1,8 @@
 <h1>Agent List</h1>
 <ul>
   <% @agents.each do |agent| %>
-    <li><%= agent.symbol %></li>
+    <li>
+      <%= link_to agent.symbol, agent_path(agent.symbol) %>
+    </li>
   <% end %>
 </ul>

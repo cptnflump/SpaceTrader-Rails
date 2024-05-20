@@ -1,0 +1,17 @@
+<h1>Create a new Agent</h1>
+
+<%= form_with model: @agent, url: agents_path, local: true do |form| %>
+  <div class="field">
+    <%= form.label :symbol %>
+    <%= form.text_field :symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :faction %>
+    <%= form.text_field :faction %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Agent" %>
+  </div>
+<% end %>
